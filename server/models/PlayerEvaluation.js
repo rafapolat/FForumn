@@ -1,0 +1,50 @@
+const mongoose = require('mongoose');
+
+const playerEvaluationSchema = new mongoose.Schema({
+  username: { type: String, required: true },
+  playerName: { type: String, required: true },
+  teamName: { type: String, required: true },
+  nationality: { type: String, required: true },
+  interactions: { type: Number, default: 0 },
+  recoveryAfterMistakes: { type: Number, required: true },
+  consistency: { type: Number, required: true },
+  physicalStrength: { type: Number, required: true },
+  stamina: { type: Number, required: true },
+  riskTaking: { type: Number, required: true },
+  socialLife: { type: Number, required: true },
+  criteria1Desc: { type: String },
+  criteria2Desc: { type: String },
+  criteria3Desc: { type: String },
+  criteria4Desc: { type: String },
+  criteria5Desc: { type: String },
+  criteria6Desc: { type: String },
+  criteria7: { type: Number, required: true }, 
+  criteria7Desc: { type: String },
+  criteria8: { type: Number, required: true }, 
+  criteria8Desc: { type: String },
+  criteria9: { type: Number, required: true },  
+  criteria9Desc: { type: String },
+  criteria10: { type: Number, required: true },  
+  criteria10Desc: { type: String },
+  criteria11: { type: Number, required: true },  
+  criteria11Desc: { type: String },
+  criteria12: { type: Number, required: true },  
+  criteria12Desc: { type: String },
+  criteria13: { type: Number, required: true },  
+  criteria13Desc: { type: String },
+  criteria14: { type: Number, required: true },  
+  criteria14Desc: { type: String },
+  criteria15: { type: Number, required: true },  
+  criteria15Desc: { type: String },
+  criteria16: { type: Number, required: true },  
+  criteria16Desc: { type: String },
+  criteria17: { type: Number, required: true },  
+  criteria17Desc: { type: String },
+  generalComment: { type: String },
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now }
+});
+
+const PlayerEvaluation = mongoose.model('PlayerEvaluation', playerEvaluationSchema);
+
+module.exports = PlayerEvaluation;
